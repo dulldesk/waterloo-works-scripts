@@ -14,6 +14,6 @@ stylesheet:
 
 I personally use the following, but any extensions that load user css styles/userscripts will work.
 - Styles - [Stylus](https://github.com/openstyles/stylus)
-- Script - [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/), [Tampermonkey](https://www.tampermonkey.net/)
+- Script - [Tampermonkey](https://www.tampermonkey.net/)
 
 Likely not compatible with the WaterlooWorks Azure extension.
