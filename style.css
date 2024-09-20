@@ -1,0 +1,54 @@
+@-moz-document url-prefix("https://waterlooworks.uwaterloo.ca/myAccount/co-op/full/") {
+#postingsTable th:nth-child(3),
+#postingsTable td:nth-child(3),
+#postingsTable th:nth-child(2),
+#postingsTable td:nth-child(2),
+#postingsTable th:nth-child(8),
+#postingsTable td:nth-child(8),
+#postingsTable th:nth-child(10),
+#postingsTable td:nth-child(10),
+#postingsTable th:nth-child(12),
+#postingsTable td:nth-child(12),
+#postingsTable th:nth-child(7),
+#postingsTable td:nth-child(7),
+#postingsTable th:nth-child(6),
+#postingsTable td:nth-child(6) {
+    display: none;
+}
+}
+
+@-moz-document url-prefix("https://waterlooworks.uwaterloo.ca/myAccount/co-op/direct/") {
+#postingsTable th:nth-child(2),
+#postingsTable td:nth-child(2),
+#postingsTable th:nth-child(4),
+#postingsTable td:nth-child(4) {
+    display: none;
+}
+}
+
+@-moz-document url-prefix("https://waterlooworks.uwaterloo.ca/myAccount/co-op/") {
+table:not(.isShortlist) {
+    .isFav td {
+        background-color: #888 !important;
+    }
+    .isFav .btn {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    .isFav .btn.favourite {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+table.isShortlist {
+    .isApplied td {
+        background-color: #888 !important;
+    }
+    .isApplied .btn {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    .isApplied .btn.favourite {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+}
+
