@@ -21,7 +21,15 @@
 #postingsTable th:nth-child(2),
 #postingsTable td:nth-child(2),
 #postingsTable th:nth-child(4),
-#postingsTable td:nth-child(4) {
+#postingsTable td:nth-child(4),
+#postingsTable th:nth-child(7),
+#postingsTable td:nth-child(7),
+#postingsTable th:nth-child(8),
+#postingsTable td:nth-child(8),
+#postingsTable th:nth-child(9),
+#postingsTable td:nth-child(9),
+#postingsTable th:nth-child(11),
+#postingsTable td:nth-child(11) {
     display: none;
 }
 }
