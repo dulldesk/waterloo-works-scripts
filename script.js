@@ -10,18 +10,20 @@
 
 'use strict';
 
-const getAppRows = () => Array.from(document.querySelectorAll('#na_studentApplicationGridTableID tr td:nth-child(7)'))
+const getAppRows = (i=7) => Array.from(document.querySelectorAll(`#na_studentApplicationGridTableID tr td:nth-child(${i})`))
 
-function queryRejected(rows) {
-  rows = rows ?? getAppRows()
+function queryRejected(rs) {
+  let rows = rs ?? getAppRows()
+  let rows2 = getAppRows(6)
 
-  let rej = rows.reduce((acc, curr) => curr.textContent.match(/(Complete|Finalized)/) ? acc + 1 : acc, 0)
+  let intv = rows2.reduce((acc, curr) => curr.textContent.match(/(Selected)/) ? acc + 1 : acc, 0)
+  let rej = rows.reduce((acc, curr) => curr.textContent.match(/(Complete|Finalized)/) ? acc + 1 : acc, 0) - intv
   let cancel = rows.reduce((acc, curr) => curr.textContent.match(/Cancel/) ? acc + 1 : acc, 0)
   let remn = rows.length - rej - cancel
 
   if (rej > 0 || cancel > 0) {
     let sp = document.createElement("span")
-    sp.textContent = `${rej}|${cancel}|${remn}`
+    sp.textContent = `${intv > 0 ? (intv + '|') : ''}${rej}|${cancel}|${remn}`
     document.querySelector(".span12.orbis-posting-actions.sel_SearchMessage .pull-right").prepend(sp)
   }
 }
