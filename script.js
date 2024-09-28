@@ -56,6 +56,14 @@ function pollLogoutTimeouts() {
   }
 }
 
+// redirect to student login page
+function redirectLogin() {
+  if (window.location.pathname === "/notLoggedIn.htm" || window.location.pathname === '/home.htm') {
+    window.location.replace('/waterloo.htm?action=login');
+  }
+}
+
 // main
 setTimeout(pollRejected, 1500);
 setTimeout(pollLogoutTimeouts, 1500);
+setTimeout(redirectLogin, 1000);

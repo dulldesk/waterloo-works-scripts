@@ -5,6 +5,7 @@ some *very* rough, but adaptable, scripts and stylesheets to customize the Water
 script:
 - counts the number of rejected/cancelled applications on the [applications page](https://waterlooworks.uwaterloo.ca/myAccount/co-op/full/applications.htm)
 - disables the auto-logout timer
+- redirects 'not logged in' status page to login page
 
 stylesheet:
 - grey-highlights shortlisted entries (ugly but improves skimming)
